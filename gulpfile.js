@@ -31,7 +31,7 @@ var path = {
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss'
+        style: 'src/style.scss'
     },
     clear: './build'
 };
@@ -60,7 +60,9 @@ gulp.task('js:build', function () {
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js)
-                .on('error', sass.logError)
+            .on('error', function (err) {
+                console.error('Error', err.message);
+            })
             )
         .pipe(reload({stream: true}));
 });

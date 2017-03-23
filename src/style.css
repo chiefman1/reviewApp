@@ -1,3 +1,82 @@
 @import url(/bower_components/bootstrap/dist/css/bootstrap.min.css);
+.header {
+  position: absolute;
+  top: 0;
+  height: 15vh; }
+
+.content {
+  height: 75vh;
+  width: 75vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }
+
+.footer {
+  height: 10vh;
+  position: absolute;
+  bottom: 0; }
+
+.row {
+  margin: 15px 0; }
+
+.rating {
+  color: #a9a9a9;
+  margin: 0;
+  padding: 0; }
+
+ul.rating {
+  display: inline-block; }
+
+.rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold; }
+
+.rating .filled {
+  color: #21568b; }
+
+.write .rating li {
+  cursor: pointer; }
+
+.send__shared_icon {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  border-radius: 4px;
+  border: 2px solid black; }
+
+.send__shared_text {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
 
 /*# sourceMappingURL=style.css.map */

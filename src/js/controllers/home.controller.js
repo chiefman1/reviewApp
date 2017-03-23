@@ -5,9 +5,9 @@
 			.module('reviewApp')
 			.controller('homeController', homeController);
 
-	homeController.$inject = ['$scope', 'getData', '$route', '$stateParams'];
+	homeController.$inject = ['$scope', 'dataService', '$state'];
 
-	function homeController($scope, getData, $route, $stateParams){
+	function homeController($scope, dataService, $route){
 		console.log('homeController loaded');
 		var vm = this;
 

@@ -1,3 +1,75 @@
-<div class="write">
-    <h1>Write</h1>
+<div class="write" ng-controller="writeController as vm">
+    <h2>User Data and Product Review</h2>
+
+    <div class="row">
+        <div class="text-center">
+            <span ng-show="vm.error">Please fill in all the fields to continue.</span>
+        </div>
+
+    </div>
+    <form>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="customerTitle">Title</label>
+            </div>
+            <div class="col-sm-9">
+                <select ng-model="vm.title" class="form-control" id="customerTitle">
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                    <option>Mrs.</option>
+                    <option>Miss</option>
+                    <option>Dr.</option>
+                    <option>Sir</option>
+                    <option>Lady</option>
+                    <option>Lord</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="customerName">Your name*</label>
+            </div>
+            <div class="col-sm-9">
+                <input type="text" ng-model="vm.name" value="{{vm.name}}" class="form-control" id="customerName">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="reviewHeader">Your impressions (In a nutshell)</label>
+            </div>
+            <div class="col-sm-9">
+                <input type="text" ng-model="vm.reviewHeader" value="{{vm.reviewHeader}}" class="form-control" id="reviewHeader">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="customersReview">Review*</label>
+            </div>
+            <div class="col-sm-9">
+                <textarea rows="3" type="text" ng-model="vm.reviewText" value="{{vm.reviewText}}" class="form-control"
+                          id="customersReview" ></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <span>Rating*</span>
+            </div>
+            <div class="col-sm-9">
+                <div ng-init="rating = star.rating + 1"></div>
+                <div class="star-rating" star-rating rating-value="rating"
+
+                     data-max="5" on-rating-selected="vm.rate(rating)"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <button class="btn btn-default" ng-click="vm.sendForm()" type="submit">NEXT</button>
+            </div>
+        </div>
+    </form>
 </div>
