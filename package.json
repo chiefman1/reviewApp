@@ -1,6 +1,6 @@
 {
   "name": "reviewApp",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "review test application",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "D. Bakhtin",
   "license": "ISC",
   "dependencies": {
+    "angular-material": "^1.1.3",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

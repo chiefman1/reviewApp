@@ -1,3 +1,11 @@
-<div class="content">
-    <div ui-view></div>
+<div class="content" ng-controller="mainController">
+
+    <div ng-hide="uiRouterState.current.name == 'home'" class="menu">
+        <button class="btn btn-info" ng-click="writeWatch()">Write</button>
+        <button class="btn btn-info" ng-disabled="uiRouterState.current.name === 'write'" ng-click="shareWatch()">Share</button>
+        <button class="btn btn-info" ng-disabled="uiRouterState.current.name === 'write' || 'share'" ng-click="sendWatch()">Send</button>
+    </div>
+
+    <div class="content-view" ui-view></div>
+
 </div>

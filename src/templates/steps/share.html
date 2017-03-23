@@ -1,14 +1,13 @@
-<div ui-view="home"></div>
-<div class="share" ng-controller="shareController">
-    <h2>Share your experience. Choose your Social Network</h2>
+<div class="share" ng-controller="mainController as vm">
+    <h2>Share your experience </h2>
     <div class="row">
         <div class="text-center">
             <span ng-show="vm.error">Please fill in all the fields to continue.</span>
         </div>
 
     </div>
-    <form ng-submit="vm.sendForm()">
-        <div class="row">
+    <form>
+        <div class="row share-experience">
             <ul>
                 <li><label for="facebook"><input ng-model="vm.facebook" id="facebook" type="checkbox">Facebook</label></li>
                 <li><label for="twitter"><input ng-model="vm.twitter" id="twitter" type="checkbox">Twitter</label></li>
@@ -17,7 +16,7 @@
         </div>
         <div class="row">
             <div class="text-center">
-                <button class="btn btn-default" ng-click="vm.sendForm()" type="submit">NEXT</button>
+                <button class="btn btn-default" ng-click="vm.sendShareForm()" type="submit">NEXT</button>
             </div>
         </div>
     </form>

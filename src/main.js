@@ -6,7 +6,4 @@
 // = ../bower_components/bootstrap/dist/js/bootstrap.min.js
 
 
-//= js/controllers/home.controller.js
-//= js/controllers/send.controller.js
-//= js/controllers/share.controller.js
-//= js/controllers/write.controller.js
+//= js/controllers/main.controller.js
