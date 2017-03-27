@@ -5,9 +5,9 @@
 		.module('reviewApp')
 		.controller('mainController', mainController);
 
-	mainController.$inject = ['$scope','$state', 'dataService', '$rootScope'];
+	mainController.$inject = ['$scope','$state', 'dataService'];
 	
-	function mainController($scope, $state, dataService, $rootScope){
+	function mainController($scope, $state, dataService){
 		var vm = this;
 
 		vm.activate = function() {
@@ -95,15 +95,12 @@
 			} else {
 				vm.error = true;
 			}
-
 		};
 
 		vm.publish = function() {
 			alert('Your review has been published successfully');
 			$state.go('home');
 		};
-
-
 	}
 	
 })();
